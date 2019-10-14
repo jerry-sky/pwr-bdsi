@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-interface row {
+export interface Pet {
   name: string,
   owner: string,
   species: string,
@@ -19,15 +19,15 @@ export const data = axios.get('http://cs.pwr.edu.pl/syga/courses/db/menagerie.js
 
     const dataProcessed: {
       table: string,
-      rows: row[]
+      rows: Pet[]
     } = { table: data.table, rows: [] };
 
     for (const row of data.rows) {
-      const t: row = { ...row };
+      const t: Pet = { ...row };
 
       for (const d of ['birth', 'death', 'date']) {
-        t[d] = new Date(row[d]);
-        t[d].setTime(t[d].getTime() + t[d].getTimezoneOffset() * 60 * 1000);
+        if (t[d]) { t[d] = new Date(row[d]); }
+        else { t[d] = null; }
       }
 
       dataProcessed.rows.push(t);
