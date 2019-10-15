@@ -3,16 +3,23 @@ import { data } from './base';
 data
   .then(data => {
 
-    const ownersWithMultiplePets: string[] = [];
+    const ownersPets: { [s: string]: number } = {};
 
     for (const row of data.rows) {
 
-      if (ownersWithMultiplePets.find(x => x === row.owner)) {
-        console.log(row.owner);
+      if (ownersPets[row.owner]) {
+        ownersPets[row.owner]++;
       } else {
-        ownersWithMultiplePets.push(row.owner);
+        ownersPets[row.owner] = 1;
       }
 
+    }
+
+    for (const o of Object.keys(ownersPets)) {
+
+      if (ownersPets[o] > 1) {
+        console.log(o);
+      }
     }
 
   });
