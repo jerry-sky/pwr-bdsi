@@ -1,0 +1,1 @@
+Select * From pet Where death is null Order by birth desc Limit 1
