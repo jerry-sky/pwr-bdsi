@@ -5,7 +5,7 @@ From
 Where
   birth = (
     Select
-      Min(`birth`)
+      Max(`birth`)
     From
       pet
     Where
