@@ -1,1 +1,13 @@
-Select * From pet Where death is null Order by birth desc Limit 1
+Select
+  *
+From
+  pet
+Where
+  birth = (
+    Select
+      Min(`birth`)
+    From
+      pet
+    Where
+      death is null
+  );
