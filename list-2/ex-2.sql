@@ -30,7 +30,7 @@ Create Table If not exists inne (
 );
 Create Table If not exists hobby (
   osoba int Not null,
-  id int Not Null AUTO_INCREMENT,
+  id int Not Null,
   typ enum('sport', 'nauka', 'inne'),
   Primary key (id, osoba, typ)
 );
