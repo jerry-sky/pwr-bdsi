@@ -15,3 +15,8 @@ Select Distinct(`owner`),
                '1999-05-23',
                'm'
 From menagerie.pet;
+# Insert Into Hobby.osoba (`imię`, `dataUrodzenia`, `plec`)
+# Select Distinct(`owner`),
+#                generate_random_date('1970-04-04', '1999-04-04'),
+#                substring('fm', 1 + Round(rand()), 1)
+# From menagerie.pet;
