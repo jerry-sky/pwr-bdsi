@@ -31,3 +31,7 @@ FROM osoba
 WHERE id IN (SELECT owner FROM zwierzak WHERE species = 'dog')
 ORDER BY dataUrodzenia
 LIMIT 1;
+
+SHOW ENGINES;
+
+SHOW INDEXES FROM sport;
