@@ -8,7 +8,13 @@ HobbyDatabase((database: Db) => {
     .aggregate([
       { '$unwind': '$pupile' },
       { '$match': { 'pupile.gatunek': 'kot' } },
-      { '$project': { '_id': 0, 'pupile': 1, 'imię': 1, } }
+      {
+        '$project': {
+          '_id': 0,
+          'pupile': 1,
+          'imię': 1,
+        }
+      }
       // { '$project': }
     ])
     // .find(
