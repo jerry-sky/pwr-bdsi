@@ -8,8 +8,7 @@ HobbyDatabase((database: Db) => {
     .aggregate([
       {
         '$match': {
-          nazwisko: 'zyhggsejn',
-          // nazwisko: 'Nowak'
+          nazwisko: 'Nowak'
         }
       },
       { '$unwind': '$zainteresowania' },

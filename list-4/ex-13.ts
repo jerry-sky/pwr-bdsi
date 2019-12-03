@@ -7,8 +7,8 @@ HobbyDatabase((database: Db) => {
     .find({
       pupile: {
         '$elemMatch': {
-          gatunek: 'kot',
-          // gatunek: 'pies'
+          // gatunek: 'kot',
+          gatunek: 'pies'
         }
       }
     },
@@ -18,6 +18,7 @@ HobbyDatabase((database: Db) => {
           nazwisko: 1,
           narodowość: 1,
           // wiek: 1,
+          // pupile: 1,
         }
       })
     .sort({ wiek: 1 })

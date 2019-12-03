@@ -19,6 +19,34 @@ HobbyDatabase((database: Db) => {
       });
     }
 
+    sporty.push(
+      {
+        nazwa: 'koszykówka',
+        typ: ['zespołowy'],
+        miejsceWykonywania: ['hala', 'na zewnątrz'],
+      },
+      {
+        nazwa: 'hokej',
+        typ: ['zespołowy'],
+        miejsceWykonywania: ['hala']
+      },
+      {
+        nazwa: 'strzelectwo',
+        typ: ['indywidualny'],
+        miejsceWykonywania: ['na zewnątrz', 'hala']
+      },
+      {
+        nazwa: 'narciarstwo',
+        typ: ['indywidualny'],
+        miejsceWykonywania: ['na zewnątrz']
+      },
+      {
+        nazwa: 'biatlon',
+        typ: ['zespołowy'],
+        miejsceWykonywania: ['hala', 'na zewnątrz']
+      }
+    );
+
     resolve(sporty);
 
   })

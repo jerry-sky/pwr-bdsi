@@ -28,6 +28,25 @@ HobbyDatabase((database: Db) => {
       });
     }
 
+    zwierzęta.push(
+      {
+        nazwa: 'kot',
+        rasy: ['Maine Coon', 'British Shorthair'],
+        minWaga: 700,
+        maxWaga: 9000,
+        ubarwienie: 'wszelakie',
+        przewidywanaDługośćŻycia: 15,
+      },
+      {
+        nazwa: 'pies',
+        rasy: ['Pomeranian', 'Labrador'],
+        minWaga: 900,
+        maxWaga: 12000,
+        ubarwienie: 'szarości z plamkami',
+        przewidywanaDługośćŻycia: 16
+      }
+    );
+
     resolve(zwierzęta);
 
   })

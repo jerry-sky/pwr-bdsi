@@ -108,6 +108,24 @@ HobbyDatabase((database: Db) => {
         });
 
       }
+      const pupile: Pupil[] = [];
+      for (let j = 0; j < Math.round(1 + Math.random() * 3); j++) {
+        pupile.push({
+          gatunek: zwierzęta[Math.round(Math.random() * (zwierzęta.length - 1))],
+          imię: getRandomString(5)
+        });
+      }
+      osoby.push(
+        {
+          imię: 'Jan',
+          nazwisko: 'Nowak',
+          wiek: 25,
+          wzrost: 190,
+          zainteresowania: getRandomFromList(sporty, 4, 2),
+          narodowość: getRandomFromList(kraje, 3),
+          pupile,
+        }
+      );
 
     })
     .then(() => {

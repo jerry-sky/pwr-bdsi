@@ -10,20 +10,18 @@ HobbyDatabase((database: Db) => {
       {
         zainteresowania: {
           '$all': [
-            'txuisae',
-            'tbrpggw',
-            // 'koszykówka',
-            // 'hokej',
+            'koszykówka',
+            'hokej',
           ]
         }
       },
     )
     .toArray()
     .then((results) => {
-      console.log(results);
-      // results.forEach(value => {
-      //   console.log(value);
-      // });
+      // console.log(results);
+      results.forEach(value => {
+        console.log(value);
+      });
     })
 
 });
